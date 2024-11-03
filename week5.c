@@ -95,6 +95,8 @@ void bubbleSort(struct person persons[], int nrPersons, int *swapped){//❇️
     *swapped =0;
     //함수가 호출된 후 swapped값을 함수 외부에서도 변경할수있도록 하기위해서 
     for(int i =0; i<nrPersons-1;i++){
+      //배열의 맨 앞에서 부터 시작해 두개의 단어를 비교하고 순서가 맞지 않으면 위치를 바꿈
+      //배열은 0부터 시작하기 때문에 -1
         for(int j=0;j<nrPersons-1-i;j++){
             if(persons[j].height>persons[j+1].height||(persons[j].height==persons[j+1].height&&strcmp(persons[j].name,persons[j+1].name))){
                 struct person temp = persons[j];
