@@ -188,7 +188,7 @@ int main(void)
             break;
             
             case 'q':
-            freePersons(persons, nrPersons);
+            //freePersons(persons, nrPersons);
             printf("Bye!\n");
             break;
             
@@ -200,7 +200,7 @@ int main(void)
         
     } while (cmd != 'q');
     
-    //freePersons(persons, nrPersons);
+    freePersons(persons, nrPersons);
     
     return 0;
 }
