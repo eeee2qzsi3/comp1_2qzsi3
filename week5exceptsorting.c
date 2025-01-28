@@ -93,6 +93,28 @@ float minHeight(struct person persons[], int nrPersons){
     return min;
 }
 
+//❇️❇️❇️❇️이렇게 접근하면 안됨
+/*float minHeight(struct person persons[], int nrPersons){
+    float min = 0.0;
+    if(persons == NULL){
+        min =0.0;
+        return min;
+    }
+    for(int i =0;i<nrPersons-1;i++){
+        for(int j =i+1;j<nrPersons;j++){
+            if(persons[i].name != NULL && persons[j].name != NULL){
+                if(persons[i].height>persons[j].height){
+                    min = persons[j].height;
+                } else if (persons[i].height<persons[j].height){
+                    min = persons[i].height;
+                }
+            }
+        }
+    }
+    return min;
+}*/
+// 그려보면 진짜 minvalue는 store안되고 계속 min보다 큰 value로 갱신
+
 void replacePerson(struct person persons[], int nrPersons, int newEntry, char *newName, float newHeight){
     if(newHeight<=0){
         printf("Height must be larger than zero\n");
